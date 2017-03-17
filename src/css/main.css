@@ -8,14 +8,14 @@ h1.logo {
 
 #number {
     font-family: 'cwTeXFangSong', serif;
-    text-align: center;
+    text-align: left;
     font-size: 25px;
     font-style: italic;
 }
 
 #description {
     font-family: 'cwTeXFangSong', serif;
-    text-align: center;
+    text-align: left;
     font-size: 25px;
 }
 

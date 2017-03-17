@@ -1,5 +1,6 @@
 window.onload = load;
     
+$(".panel").hide();
 
 function load() {
         // Initialize Firebase
@@ -15,7 +16,7 @@ function load() {
         // Get a reference to the database service
         var database = firebase.database();       
     
-        $(".panel").hide();
+
 }
 
 $(document).ready(function() {
