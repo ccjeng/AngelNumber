@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <title>天使數字</title>   
+    <meta content='天使數字' name='description'/>
+    <meta content='天使數字' name='keywords'/>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel='stylesheet' href="./css/all.min.css">
+
+
+
+    <!-- Google Analytics -->
+
+    <!-- End Google Analytics -->
+
+</head>
+<body>
+<br/>
+<br/>
+
+<h1 class="logo">天使數字</h1>
+<div class="container">
+    <div class="form-group" id="form">
+        <form role="form" action="">
+            <p></p>
+            <div class="input-group col-lg-6">
+                <input type="number" id="num" class="form-control" value="" placeholder="輸入0-999" maxlength="3" size="3"/>  
+                <span class="input-group-btn">
+                <input type="submit" class="btn btn-primary" value="查詢">
+                </span>        
+            </div>            
+        </form>
+    </div>
+
+
+    <div id="error"></div>
+
+
+
+    <br/>
+    <div class="result panel panel-default">
+        <div class="panel-body">
+            <div id="number"></div>
+            <div id="description"></div>  
+        </div>      
+    </div>
+
+</div>
+
+
+
+<script src="//code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+<script src="./js/all.min.js"></script>
+
+</body>
+</html>
