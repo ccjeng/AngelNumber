@@ -1,6 +1,5 @@
 window.onload = load;
     
-$(".panel").hide();
 
 function load() {
         // Initialize Firebase
@@ -16,29 +15,22 @@ function load() {
         // Get a reference to the database service
         var database = firebase.database();       
     
-
 }
 
 $(document).ready(function() {
-
-
 
         $("form").submit(function(e) {
             e.preventDefault();
 
             //clean
-            $(".panel").show(); 
-            $("#number").text("");
-            $("#description").text("");
+            $(".result").show(); 
 
             var num = $("#num").val().toLowerCase();
 
-            console.log("num = " + num);
-
-            $("#number").text(num);
-            return firebase.database().ref(num+'/').once('value').then(function(data) {
-                var result  = data.val().desc;
-                console.log("result = "+result);
+            return firebase.database().ref('results')
+                .orderByChild("num").equalTo(num)
+                .once('child_added')
+                .then(function(data) {
 
                 $("#number").text(data.val().num);
                 $("#description").text(data.val().desc);
@@ -47,15 +39,8 @@ $(document).ready(function() {
 
         });
 
-    
        
 });
 
 
 
-
-
-
-function isEmpty(str) {
-    return (!str || 0 === str.length);
-}
